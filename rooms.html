@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="rooms.css" />
+  </head>
+  <body>
+    <header>
+      <section>
+        <h1>Booking</h1>
+      </section>
+      <section>
+        <a href="index.html"><img src="images/logo2.jpg" alt="logo" /></a>
+        
+      </section>
+      <section>
+        <a href="rooms.html"><h1 class="adv">Adventure</h1></a>
+      </section>
+    </header>
+
+    <section class="container">
+      <h2>Hotel Name</h2>
+
+      <div class="label-Box">
+        <label class="label">Check-in Date:</label>
+        <input type="date" class="date-picker" id="checkInDate"/>
+      </div>
+
+      <h3>Rooms Booking:</h3>
+      <section class="date-picker-container">
+        
+        <div class="label-Box">
+          <label class="label">Room Type:</label>
+          <div>
+            <select class="selectBox" id="roomType">
+              <option>Single - LKR 25,000</option>
+              <option>Double- LKR 35,000</option>
+              <option>Triple- LKR 40,000</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="label-Box">
+          <label class="label">Number of Adults:</label>
+          <input type="number" class="name" id="adults" value="0" />
+        </div>
+
+        <div class="label-Box">
+          <label class="label">Number of Children (Below 5 years):</label>
+          <input type="number" class="name" id="children1" value="0" />
+        </div>
+
+        <div class="label-Box">
+          <label class="label">Number of Children (above 5 years):</label>
+          <input type="number" class="name" id="children2" placeholder="0" />
+        </div>
+
+        
+      </section>
+
+      
+
+      <h3>Extra Requirements:</h3>
+      <div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="wifi" name="extra" value="Wifi Access">
+          <label for="checkbox1">Wifi Access</label>
+      
+          <input type="checkbox" id="pool" name="extra" value="Pool">
+          <label for="checkbox2">Pool</label>
+      
+          <input type="checkbox" id="garden" name="extra" value="Garden">
+          <label for="checkbox3">Garden</label>
+
+          <input type="checkbox" id="extraBed" name="extra" value="Extra Bed">
+          <label for="checkbox3">Extra Bed</label>
+        </div>
+
+        
+
+        <div class="btn-Box">
+          <button onclick="bookNow();">Book Now</button>
+
+          <div class="table-Box">
+            <table class="table" id="bookingTable">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Booking</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">Total:</td>
+                  <td id="totalPrice">0</td>
+                </tr>
+              </tfoot>
+            </table>
+            
+          </div>
+
+          <button class="btn" onclick="showPaymentSection()">Proceed to Pay</button>
+
+          
+        </div>
+        
+        
+      </div>
+      
+    </section>
+
+    <section class="container">
+      <h2>Adventure Booking</h2>
+    
+      <div class="label-Box">
+        <label class="label">Check-in Date:</label>
+        <input type="date" class="date-picker" id="checkInDate" />
+      </div>
+    
+      <section class="date-picker-container">
+        <div class="label-Box">
+          <label class="label">Adventure Type:</label>
+          <div>
+            <select class="selectBox" id="adventureType">
+              <option>Diving</option>
+              <option>Hiking</option>
+              <option>Horse Riding</option>
+            </select>
+          </div>
+        </div>
+    
+        <div class="label-Box">
+          <label class="label">Number of local Adults:</label>
+          <input type="number" class="name" id="localAdults" value="0" />
+        </div>
+        <div class="label-Box">
+          <label class="label">Number of local Children:</label>
+          <input type="number" class="name" id="localChildren" value="0" />
+        </div>
+    
+        <div class="label-Box">
+          <label class="label">Number of foreign Adults:</label>
+          <input type="number" class="name" id="foreignAdults" value="0" />
+        </div>
+        <div class="label-Box">
+          <label class="label">Number of foreign Children:</label>
+          <input type="number" class="name" id="foreignChildren" value="0" />
+        </div>
+      </section>
+    
+      <h3>Extra Requirements:</h3>
+      <div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="guideForAdults" name="guideForAdults">
+          <label>Guide for Adults</label>
+    
+          <input type="checkbox" id="guideForKids" name="guideForKids">
+          <label>Guide for Kids</label>
+        </div>
+    
+        <div class="btn-Box">
+          <button onclick="bookAdventure();">Book Adventure</button>
+    
+          <div class="table-Box">
+            <table class="table" id="bookingAdventureTable">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Booking</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="2">Total</td>
+                  <td id="totalAdventurePrice">0</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+    
+          <button class="btn" onclick="showPaymentSection()">Proceed to Pay</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="payment-Cont" id="paymentSection">
+      <h2>Payment Sections</h2>
+      <h3>Payment Method:</h3>
+      <section class="date-picker-container">
+        <div class="radio-container">
+          <label class="radio-label">
+            <input type="radio" name="payment" class="radio-input" value="credit"/>
+            Credit Card
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="payment" class="radio-input" value="debit"/>
+            Debit Card
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="payment" class="radio-input" value="Paypal"/>
+            Paypal
+          </label>
+        </div>
+        <div>
+          <input type="number" class="promocode" placeholder=" Enter loyalty points" />
+        </div>
+        <div>
+          <input type="text" class="promocode" id="promoCodeInput" placeholder=" Enter promotion code" />
+        </div>
+      </section>
+
+      <div class="btn-Box">
+        <button onclick="updateFullTotal();">Proceed</button>
+      </div>
+      <div class="total">
+        <h1>Your Full Total: LKR <span id="fullTotal">0</span></h1>    
+      </div>
+  
+      <h3>Enter Your Card Details:</h3>
+      <div class="date-picker-container">
+        <div>
+          <input type="text" class="promocode" placeholder=" Enter Card Holder Name" />
+        </div>
+        <div>
+          <input type="text" class="promocode" placeholder=" Enter Card Number" />
+        </div>
+      </div>
+      <div class="date-picker-container">
+        <div class="exp-card">
+          <label for="date1" class="label">Card Expiration date: </label>
+          <input type="number" class="exp-date" placeholder="month"/>
+        </div>
+        <div class="exp-card">
+          <input type="number" class="exp-date"  placeholder="year"/>
+        </div>
+      </div>
+  
+      <div class="date-picker-container">
+        <div class="exp-card">
+          <label for="date1" class="label">Security Code: </label>
+          <input type="number" class="exp-date" placeholder="cvv"/>
+        </div>
+      </div>
+      <div class="date-picker-container">
+        <button>Pay Now</button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-section">
+        <img src="images/logo-icon.jpg" alt="" class="logo-icon" />
+        <p class="names">
+          Blue Lagoon <br />
+          <span class="motto">Where luxury becomes affortable</span>
+        </p>
+        <p class="names">
+          <span class="contact">0771112223</span> <br />
+          <span class="contact">bluelagoon@gmail.com</span> <br />
+          <span class="contact">Galle, bentara, Waligama</span> <br />
+        </p>
+      </div>
+
+      <div class="footer-section center-icons">
+        <ul class="icons">
+            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+            <li><a href="#"><i class="bi bi-messenger"></i></a></li>
+            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section links">
+        <ul class="lists">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="branch.html">About us</a></li>
+          <li><a href="adventure.html">Adventures</a></li>
+          <li><a href="restuarent.html">Resturants</a></li>
+          <li><a href="#">Booking</a></li>
+          <li><a href="wedding.html">Wedding</a></li>
+          <li><a href="birthday.html">Birthday</a></li>
+          </ul>
+      </div>
+    </footer>
+    <script src="adventureBook.js"></script>
+
+    <script src="book.js"></script>
+
+    <script type="text/javascript">
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+    function showPaymentSection() {
+      var paymentSection = document.getElementById("paymentSection");
+      paymentSection.style.display = "block";
+
+      var bookTotal = parseFloat(document.getElementById('totalPrice').innerHTML) || 0;
+    var adventureTotal = parseFloat(document.getElementById('totalAdventurePrice').innerHTML) || 0;
+  
+    // Calculate the full total by adding both totals
+    var fullTotal = bookTotal + adventureTotal;
+    
+    document.getElementById('fullTotal').innerHTML = fullTotal;
+
+    }
+
+    </script>
+
+<script src="promo.js"></script>
+
+
+
+  </body>
+</html>

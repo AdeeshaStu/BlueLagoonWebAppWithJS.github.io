@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Lobster+Two&family=Ubuntu:wght@300&display=swap');
+
+body{
+    background-color: #12121e;
+    font-family: 'Arvo', serif;
+    scroll-behavior: smooth;
+    /* font-family: 'Arvo', serif;
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Ubuntu', sans-serif; */
+    /*font color- #63d3e0 */
+    
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 10px 0;
+    background-color: #12121e; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.logo{
+    margin-top: 20px;
+    width: 150px;
+    cursor: pointer;
+} 
+
+.container{
+    margin-left: 5%;
+    margin-top: 30px;
+    background-color: #12121e;
+    width: 90%;
+    height: 530px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    border-radius: 20px;
+
+}
+
+.container:hover{
+    transition: 0.3s ease;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.wedding-img{
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+h1{
+    font-family: 'Lobster Two', cursive;
+    z-index: 1;
+    font-size: 5rem;
+    width: 80%;
+    position: absolute;
+    color: #63d3e0;
+    left: 10%;
+    top: 220px;
+    text-align: center;
+}
+
+h3{
+    font-family: inherit;
+    z-index: 1;
+    font-size: 1.4rem;
+    position: absolute;
+    color: #63d3e0;
+    left: 370px;
+    top: 370px;
+
+}
+
+.description{
+    color: #98bbbe;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.row{
+    position: relative;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.row .col50{
+    position: relative;
+    flex: 1;
+    margin-left: 5%;
+}
+
+p{
+    text-align: justify;
+    color: #98bbbe;
+}
+
+.row .col50 .imgBx{
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+}
+.row .col50 .imgBx img{
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+.row .col50 .imgBx img:hover{
+    width: 103%;
+    height: 103%;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+}
+
+.sec1{
+    margin-left: 60px;
+}
+
+h2{
+    color: #63d3e0;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h4{
+    text-align: center;
+    color: #63d3e0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.points{
+    color: #98bbbe;
+}
+
+.points li{
+    margin-bottom: 10px;
+}
+
+
+button{
+    margin-top: 30px;
+    margin-left: 90px;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border-color: #63d3e0;
+    color: #63d3e0;
+    background-color: #12121e;
+    font-family: 'Arvo', serif;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    background-color: #63d3e0;
+    color: #12121e;
+}
+
+/* footer */
+footer{
+    padding-bottom: 50px;
+    background-color: #08060f;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section {
+    margin-top: 40px;
+    flex: 1;
+}
+
+.logo-icon{
+    width: 80px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 70px;
+}
+.names{
+    text-align: justify;
+    color: #98bbbe;
+    margin-left: 70px;
+    margin-top: 1px;
+}
+
+.motto{
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;;
+}
+
+.contact{
+    font-size: 14px;
+}
+
+.lists{
+    list-style: none;
+}
+
+.center-icons {
+    text-align: center;
+    margin-top: 180px;
+
+}
+
+.icons li{
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.icons li a{
+    color: #63d3e0;
+}
+
+.icons li a:hover{
+    transition: 0.3s ease;
+    color: white;
+}
+
+.links{
+    display: flex;
+    justify-content: center
+}
+
+.lists {
+    list-style: none;
+    padding: 0;
+}
+.lists li {
+    margin: 5px 0;
+    margin-bottom: 15px;
+}
+
+.lists a {
+    text-decoration: none;
+    color: #63d3e0;
+}
+
+.lists a:hover {
+
+    color: white;
+}
+
+
+@media screen and (max-width: 855px) {
+    /* Add your responsive styles here for smaller screens */
+    .container{
+        height: 600px;
+    }
+    h2{
+        bottom: 200px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        margin-bottom: 10px;
+    }
+    
+    nav li:last-child {
+        margin-bottom: 0;
+    }
+    
+    h3{
+        left: 10px;
+        font-size: 2.5rem;
+    }
+    button{
+        left: 10px;
+    }
+}
+
+@media screen and (max-width: 558px) {
+
+
+    .image{
+        width: 300px;
+
+    }
+    h2{
+        font-size: 18px;
+        bottom: 200px;
+    }
+    
+    .sec1{
+        height: 950px;
+    }
+
+    .row .col50 {
+        width: 100%;
+         /* Make the column take full width */
+    }
+
+    .row .col50 .imgBx img {
+        width: 87%; /* Make the image take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .row .col50 .imgBx img:hover{
+        width: 87%;
+        height: auto;;
+        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    p {
+        text-align: center; /* Center text below the image */
+    }.row{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .row .col50{
+        
+        width: 87%;
+    }
+    .price{
+        font-size: 2rem;
+    }
+    h2{
+        left: 30px;
+    }
+
+    .sec2{
+        position: relative;
+        margin-top: 200px;
+    
+    }
+    .sec2 iframe{
+
+        margin-bottom: 100px;
+    }
+    .center-icons {
+        text-align: center;
+        margin-top: 0px;
+    
+    }
+    .icons li{
+        display: block;
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    .names{
+        margin-left: 10px;
+        margin-top: 1px;
+    }
+
+    button{
+        bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    h1{
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+    .container{
+        height: 350px;
+    }
+
+    .wedding-img{
+        height: 350px;
+    }
+
+    h3{
+        top: 50px;
+        font-size: 1.5rem;
+        bottom: 250px;
+    }
+
+    h2{
+        text-align: center;
+        top: 0px;
+    }
+    .logo-icon{
+        margin-left: 50px;
+        width: 50px;
+    }
+
+    .icons li{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .names{
+        font-size: 12px;
+    }
+    .motto{
+        font-size: 11px;
+    }
+
+    .contact{
+        font-size: 12px;
+    }
+
+    .lists{
+        font-size: 12px;
+    }
+    .sec1{
+        height: 900px;
+    }
+    .sec2{
+        position: relative;
+        margin-top:250px;
+    }
+
+
+    p{
+        margin-top: 50px;
+    }
+
+}

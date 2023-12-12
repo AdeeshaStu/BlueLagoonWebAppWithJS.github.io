@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Lobster+Two&family=Ubuntu:wght@300&display=swap');
+
+body{
+    background-color: #12121e;
+    font-family: 'Arvo', serif;
+    scroll-behavior: smooth;
+    /* font-family: 'Arvo', serif;
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Ubuntu', sans-serif; */
+    /*font color- #63d3e0 */
+}
+
+.logo{
+    flex-wrap: wrap;
+    position: absolute;
+    top: -10px;
+}
+
+img.logo-icon{
+    width: 50px;
+}
+
+nav {
+    flex-wrap: wrap;
+    margin-top: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 20px;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav li {
+    float: left;
+    margin-right: 20px;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+
+}
+
+nav li a:hover {
+    color: #12121e;
+    background-color: #63d3e0;
+    border-radius: 10px;
+}
+
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 10px 0;
+    background-color: #12121e; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+    flex-direction: column; /* Stack items vertically */
+}
+
+h1{
+    font-size: 5rem;
+    color: #63d3e0;
+    font-family: 'Lobster Two', cursive;
+    margin-bottom: 0px;
+
+}
+
+h3{
+    margin-top: 0px;
+    margin-bottom: 100px;
+    font-size: 1.4rem;
+    color: #63d3e0;
+    font-family: 'Ubuntu', sans-serif;;
+}
+
+h2{
+    position: absolute;
+    z-index: 1;
+    font-size: 3rem;
+    left: 150px;
+    bottom: 130px;
+    font-family: 'Lobster Two', cursive;
+    color: #63d3e0;
+}
+
+.row{
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50{
+    position: relative;
+    width: 48%;
+}
+
+p{
+    text-align: justify;
+    color: #98bbbe;
+}
+
+.row .col50 .imgBx{
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+}
+.row .col50 .imgBx img{
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+    opacity: 0.5;
+}
+.row .col50 .imgBx img:hover{
+    width: 103%;
+    height: 103%;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+}
+
+button{
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border-color: #63d3e0;
+    color: #63d3e0;
+    background-color: #12121e;
+    font-family: 'Arvo', serif;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    background-color: #63d3e0;
+    color: #12121e;
+}
+
+.sec1{
+    height: 78vh;
+}
+
+.sec2{
+    height: 25%;
+    
+}
+
+.menu-time ul{
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.menu-time ul li{
+
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.menu-time ul li p{
+    text-align: center;
+    color: #63d3e0;
+}
+
+.menu-time ul li a{
+    text-align: center;
+    cursor: pointer;
+    color: #63d3e0;
+}
+
+.menu-time ul li a:hover{
+    color: white;
+}
+
+.menu-time ul li .p1{
+    text-align: center;
+    color: #98bbbe;
+}
+
+
+
+.images{
+    opacity: 0.5;
+}
+
+h4{
+    z-index: 1;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    color: #63d3e0;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+}
+
+.btn{
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    width: 160px;
+    height: 50px;
+    font-size: 18px;
+    border-color: #63d3e0;
+    color: #63d3e0;
+    background-color: #12121e;
+    font-family: 'Arvo', serif;
+    transition: 0.3s ease;
+    left: 200px;
+    bottom: 20px;
+}
+
+.btn:hover{
+    background-color: #63d3e0;
+    color: #12121e;
+}
+
+
+/* footer */
+footer{
+    padding-bottom: 50px;
+    background-color: #08060f;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section {
+    margin-top: 40px;
+    flex: 1;
+}
+
+.logo-icon{
+    width: 80px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 70px;
+}
+.name{
+    text-align: justify;
+    color: #98bbbe;
+    margin-left: 70px;
+    margin-top: 1px;
+}
+
+.motto{
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;;
+}
+
+.contact{
+    font-size: 14px;
+}
+
+.lists{
+    list-style: none;
+}
+
+.center-icons {
+    text-align: center;
+    margin-top: 180px;
+
+}
+
+.icons li{
+    display: inline;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.icons li a{
+    color: #63d3e0;
+}
+
+.icons li a:hover{
+    transition: 0.3s ease;
+    color: white;
+}
+
+.links{
+    display: flex;
+    justify-content: center
+}
+
+.lists {
+    list-style: none;
+    padding: 0;
+}
+.lists li {
+    margin: 5px 0;
+    margin-bottom: 15px;
+}
+
+.lists a {
+    text-decoration: none;
+    color: #63d3e0;
+}
+
+.lists a:hover {
+
+    color: white;
+}
+
+
+
+
+@media screen and (max-width: 875px) {
+    /* Add your responsive styles here for smaller screens */
+    h3{
+        margin-top: 0px;
+    }
+
+    .logo{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        margin-bottom: 10px;
+    }
+    
+    nav li:last-child {
+        margin-bottom: 0;
+    }
+    
+    h2{
+        left: 30px;
+    }
+
+    .sec1{
+        height: 90vh;
+    }
+    
+    h4{
+        left: 10px;
+        font-size: 2.5rem;
+    }
+    .btn{
+        left: 10px;
+    }
+    
+    
+}
+
+@media screen and (max-width: 777px) {
+
+    h1{
+        text-align: center;
+    }
+    .sec1{
+        height: 120vh;
+    }
+    .sec2{
+        height: 35%;
+    }
+    
+}
+
+@media screen and (max-width: 613px) {
+
+
+    h1{
+        text-align: center;
+
+    }
+    h3{
+        margin-top: 0px;
+    }
+    
+    .row .col50 {
+        width: 100%; /* Make the column take full width */
+    }
+
+    .row .col50 .imgBx img {
+        width: 100%; /* Make the image take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .row .col50 .imgBx img:hover{
+        transition: 0.3s ease;
+        width: 100%;
+        height: auto;;
+        box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    p {
+        text-align: center; /* Center text below the image */
+    }
+    
+    .row{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sec1{
+        height: 900px;
+    }
+    
+    .sec2{
+        height: 150px;
+    }
+    .sec3{
+        position: relative;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+
+    button{
+        margin-bottom: 20px;
+    }
+    
+    h2{
+        left: 30px;
+    }
+
+
+    .center-icons {
+        text-align: center;
+        margin-top: 0px;
+    
+    }
+    .icons li{
+        display: block;
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    .name{
+        margin-left: 10px;
+        margin-top: 1px;
+    }
+
+    .btn{
+        bottom: 40px;
+    }
+}
+@media screen and (max-width: 438px) {
+    h1{
+        font-size: 3.8rem;
+    }
+    h4{
+        top: 50px;
+        font-size: 1.5rem;
+        bottom: 250px;
+    }
+
+    .sec1{
+        height: 900px;
+    }
+
+    .sec2{
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    h1{
+        text-align: center;
+        font-size: 3.4rem;
+    }
+
+    h3{
+        font-size: 0.9rem;
+        margin-top: 0px;
+    }
+
+    
+
+    h2{
+        top: 0px;
+    }
+    .sec1{
+        height: 1200px;
+    }
+    
+    .sec2{
+        height: 300px;
+    }
+    .sec3{
+        position: relative;
+        margin-top:250px;
+    }
+
+    .logo-icon{
+        margin-left: 50px;
+        width: 50px;
+    }
+
+    .icons li{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .name{
+        font-size: 12px;
+    }
+    .motto{
+        font-size: 11px;
+    }
+
+    .contact{
+        font-size: 12px;
+    }
+
+    .lists{
+        font-size: 12px;
+    }
+
+    .map1{
+        position: absolute;
+        top: 0;
+    }
+
+}
